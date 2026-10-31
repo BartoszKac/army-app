@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1c4630">
+  <link rel="icon" href="/assets/emblem.svg" type="image/svg+xml">
+  <title>Panel zdjęć</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="masthead compact">
+    <div class="wrap">
+      <div class="topline mono">
+        <a class="brand" href="/"><img src="/assets/emblem.svg" alt="" width="32" height="32">Wydarzenia wojskowe</a>
+        <span>Panel zarządzania</span>
+      </div>
+      <h1 class="display">Panel</h1>
+      <div class="masthead-bar" style="align-items:center">
+        <span class="mono" id="status">Wymagane logowanie</span>
+        <div class="admin-actions">
+          <a class="btn line" href="/">Zobacz stronę</a>
+          <button id="logout" class="btn line hidden" type="button">Wyloguj</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap admin-main">
+    <section id="login-view" class="box login">
+      <h2>Zaloguj się</h2>
+      <form id="login-form">
+        <label for="password">Hasło</label>
+        <input id="password" type="password" autocomplete="current-password" required autofocus>
+        <button class="btn block" type="submit">Zaloguj</button>
+        <p id="login-msg" class="msg" role="alert"></p>
+      </form>
+    </section>
+
+    <section id="admin-view" class="admin-grid hidden">
+      <div class="box">
+        <h2>Dodaj zdjęcie</h2>
+        <form id="upload-form">
+          <div id="drop" class="drop" tabindex="0" role="button" aria-label="Wybierz zdjęcie z komputera">
+            <div><strong>Kliknij, aby wybrać zdjęcie</strong><span>albo przeciągnij je tutaj</span></div>
+          </div>
+          <input id="file" type="file" accept="image/*" class="hidden">
+
+          <label for="event">Wydarzenie <span class="mono">można zostawić puste</span></label>
+          <input id="event" type="text" maxlength="200" list="events" autocomplete="off" placeholder="np. Przysięga wojskowa">
+          <datalist id="events"></datalist>
+
+          <label for="date">Data <span class="mono">np. 1978 lub 1978-05-09</span></label>
+          <input id="date" type="text" maxlength="40" inputmode="numeric" placeholder="1978">
+
+          <label for="description">Opis <span class="mono">opcjonalnie</span></label>
+          <textarea id="description" maxlength="1000"></textarea>
+
+          <button id="upload-btn" class="btn block" type="submit">Dodaj do archiwum</button>
+          <p id="upload-msg" class="msg" role="status"></p>
+        </form>
+      </div>
+
+      <div>
+        <div class="list-head">
+          <h2>W archiwum</h2>
+          <span id="admin-count" class="mono"></span>
+        </div>
+        <div id="admin-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/assets/common.js"></script>
+  <script src="/assets/admin.js"></script>
+</body>
+</html>

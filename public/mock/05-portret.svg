@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d8c9a8"/><stop offset="1" stop-color="#a98e64"/></linearGradient>
+<filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0.25  0 0 0 0 0.2  0 0 0 0 0.12  0 0 0 0.35 0"/></filter>
+<radialGradient id="vig" cx="50%" cy="50%" r="75%"><stop offset="0.6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#1a120a" stop-opacity="0.55"/></radialGradient></defs>
+<rect width="800" height="1000" fill="url(#sky)"/>
+<g fill="#33281b"><ellipse cx="400" cy="420" rx="120" ry="145"/><path d="M270 330 Q400 230 530 330 L560 300 Q400 200 240 300Z"/><rect x="250" y="280" width="300" height="40" rx="18"/>
+<path d="M140 1000 Q160 640 400 610 Q640 640 660 1000Z"/></g><g fill="#c9b48c" opacity=".55"><rect x="300" y="720" width="40" height="12"/><rect x="460" y="720" width="40" height="12"/><circle cx="400" cy="300" r="12"/></g>
+<rect x="30" y="30" width="740" height="940" fill="none" stroke="#f3ead6" stroke-width="10" opacity=".6"/><rect width="800" height="1000" filter="url(#grain)"/><rect width="800" height="1000" fill="url(#vig)"/></svg>

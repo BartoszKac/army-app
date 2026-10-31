@@ -1,0 +1,8 @@
+[
+  { "id": "m1", "src": "/mock/01-poligon.svg", "event": "Ćwiczenia jesienne", "date": "1978-10", "description": "Manewry, druga kompania." },
+  { "id": "m6", "src": "/mock/06-koszary.svg", "event": "Ćwiczenia jesienne", "date": "1978-10", "description": "Budynek sztabu." },
+  { "id": "m2", "src": "/mock/02-defilada.svg", "event": "Defilada", "date": "1979-05-09", "description": "Pododdział reprezentacyjny." },
+  { "id": "m5", "src": "/mock/05-portret.svg", "event": "Przysięga wojskowa", "date": "1977", "description": "Pierwsze zdjęcie w mundurze." },
+  { "id": "m4", "src": "/mock/04-okret.svg", "event": "", "date": "1980-08", "description": "Wizyta w porcie wojennym." },
+  { "id": "m3", "src": "/mock/03-samolot.svg", "event": "", "date": "1981", "description": "" }
+]
