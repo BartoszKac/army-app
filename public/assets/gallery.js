@@ -156,7 +156,25 @@ viewer.addEventListener("touchend", (e) => {
   touchX = null;
 });
 
-loadPhotos().then((r) => {
-  photos = r.photos;
+// Reload whenever the tab comes back into view and every minute, so new uploads
+// show up without a manual refresh. Re-render only when the list actually changed.
+let signature = null;
+async function refresh() {
+  if (viewer.classList.contains("open")) return;
+  let list;
+  try {
+    list = await loadPhotos();
+  } catch {
+    if (signature === null) feed.replaceChildren(el("p", { class: "empty", text: "Nie udało się wczytać zdjęć. Spróbuj odświeżyć stronę." }));
+    return;
+  }
+  const next = list.map((p) => p.id).join(",");
+  if (next === signature) return;
+  signature = next;
+  photos = list;
   render();
-});
+}
+
+refresh();
+setInterval(() => { if (!document.hidden) refresh(); }, 60000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) refresh(); });

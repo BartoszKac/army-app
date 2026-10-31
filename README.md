@@ -23,5 +23,4 @@ npx netlify-cli dev
 ```
 
 Open http://localhost:8888 (gallery) and http://localhost:8888/admin.html (panel).
-Until the first real photo is uploaded, the gallery shows mock images from `public/mock`.
 # army-app

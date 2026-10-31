@@ -2,16 +2,9 @@
 const UNTITLED = "Wydarzenie bez tytułu";
 
 async function loadPhotos() {
-  try {
-    const res = await fetch("/api/list", { cache: "no-store" });
-    if (!res.ok) throw new Error(res.status);
-    const { photos } = await res.json();
-    if (photos.length) return { photos, demo: false };
-  } catch (e) {
-    // API unavailable (e.g. opened locally without netlify dev) - fall back to mocks.
-  }
-  const res = await fetch("/mock/mock.json");
-  return { photos: await res.json(), demo: true };
+  const res = await fetch("/api/list", { cache: "no-store" });
+  if (!res.ok) throw new Error(`api ${res.status}`);
+  return (await res.json()).photos;
 }
 
 // Older uploads stored the name as "title".

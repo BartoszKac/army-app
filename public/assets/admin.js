@@ -135,11 +135,17 @@ $("upload-form").addEventListener("submit", async (e) => {
 // --- List & delete ---
 async function refreshList() {
   const list = $("admin-list");
-  const { photos, demo } = await loadPhotos();
+  let photos;
+  try {
+    photos = await loadPhotos();
+  } catch {
+    list.replaceChildren(el("p", { class: "notice", text: "Nie udało się pobrać listy zdjęć." }));
+    return;
+  }
   list.innerHTML = "";
-  if (demo) {
+  if (!photos.length) {
     $("admin-count").textContent = "";
-    list.append(el("p", { class: "notice", text: "Archiwum jest puste. Na stronie widać przykładowe zdjęcia, dopóki nie dodasz pierwszego." }));
+    list.append(el("p", { class: "notice", text: "Nie dodano jeszcze żadnych zdjęć." }));
     return;
   }
   $("admin-count").textContent = `${photos.length} ${plural(photos.length, "zdjęcie", "zdjęcia", "zdjęć")}`;

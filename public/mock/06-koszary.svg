@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eadfc8"/><stop offset="1" stop-color="#c2ad86"/></linearGradient>
-<filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0.25  0 0 0 0 0.2  0 0 0 0 0.12  0 0 0 0.35 0"/></filter>
-<radialGradient id="vig" cx="50%" cy="50%" r="75%"><stop offset="0.6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#1a120a" stop-opacity="0.55"/></radialGradient></defs>
-<rect width="1200" height="800" fill="url(#sky)"/>
-<rect y="600" width="1200" height="200" fill="#8a7454"/>
-<g fill="#4a3b28"><rect x="150" y="380" width="900" height="230"/><path d="M120 390 L600 260 L1080 390Z"/></g>
-<g fill="#d8c8a6"><rect x="200" y="430" width="55" height="70"/><rect x="305" y="430" width="55" height="70"/><rect x="410" y="430" width="55" height="70"/><rect x="515" y="430" width="55" height="70"/><rect x="620" y="430" width="55" height="70"/><rect x="725" y="430" width="55" height="70"/><rect x="830" y="430" width="55" height="70"/><rect x="935" y="430" width="55" height="70"/></g><rect x="560" y="520" width="80" height="90" fill="#2a2015"/>
-<g fill="#3a2e1f"><rect x="1100" y="200" width="8" height="410"/><path d="M1108 205 L1180 225 L1108 245Z" fill="#5a4630"/></g><rect width="1200" height="800" filter="url(#grain)"/><rect width="1200" height="800" fill="url(#vig)"/></svg>

@@ -52,7 +52,6 @@ img { max-width: 100%; }
 }
 .masthead-bar strong { color: var(--white); font-weight: 500; }
 
-.demo-note { background: var(--green-soft); color: var(--green); padding: 10px 0; border-bottom: 1px solid var(--green-line); }
 
 /* Index of events */
 .index { padding: clamp(48px, 7vw, 96px) 0 0; }
